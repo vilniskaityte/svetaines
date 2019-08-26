@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+ <html>
+   <head>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+     <link rel="stylesheet" href="css/css.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+     <meta charset="UTF-8">
+     <style media="screen">
+
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+      .accordion {
+          width: 50%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          background: linear-gradient(to bottom right, #ddd, #eee);
+          background: #eeee;
+          margin: 0 auto;
+          border-radius: 3px;
+      }
+
+      @media screen and (max-width: 990px) {
+        .accordion {
+          width: 100%  !important;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-right: 120px !important;
+        }
+      }
+
+
+    @media screen and (max-width: 990px){
+      .heading{
+        width: 100% !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+      .heading {
+        color: black;
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+        padding-left: 15px;
+      }
+
+      .el-katalogai{
+        margin-top:45px;
+      }
+
+      @media screen and (min-width: 1500px){
+        .el-katalogai{
+          margin-left: -250px !important;
+        }
+      }
+
+      @media screen and (max-width: 1300px){
+        .el-katalogai{
+          margin-left: -200px !important;
+        }
+      }
+
+
+
+      @media screen and (max-width: 990px){
+      .contents {
+        width: 100% !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+      .heading:nth-last-child(2){
+        border-bottom:0;
+      }
+      .heading:hover {
+        background: #dddd;
+        border-radius: 0;
+      }
+      .heading:first-child:hover {
+        border-radius: 3px 3px 0 0;
+      }
+      .heading:nth-last-child(2):hover{
+        border-radius:0 0 3px 3px;
+      }
+      .heading::before {
+        content: '';
+        vertical-align: middle;
+        display: inline-block;
+        border-top: 10px solid grey;
+        border-left: 10px solid transparent;
+        border-right:10px solid transparent;
+        float: right;
+        transform: rotate(0);
+        transition: all 0.5s;
+        margin-top: 5px;
+      }
+      .active.heading::before {
+        transform: rotate(-180deg);
+      }
+      .not-active.heading::before {
+        transform: rotate(0deg);
+      }
+      .contents {
+        display: none;
+        background: #ddd;
+        padding: 15px;
+        color: black;
+        line-height: 1.5;
+      }
+
+      td{
+        width:80px;
+      }
+
+      .viduryje{
+        padding-top: 35px;
+      }
+      #headerwrap {
+        background: url(images/123.jpg) no-repeat center top;
+        margin-top:-15px;
+        text-align:center;
+        background-attachment: relative;
+        background-position: center center;
+        min-height: 200px;
+        width: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin-left: auto;
+      }
+    </style>
+
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+   <body background="images/3.jpg">
+     <header>
+        <ul>
+
+           <div class="menu5">
+             <li class="menu-top1"><a class="lt" href="index.html">LT</a></li>
+             <li class="menu-top1"><a href="en.html">EN</a></li>
+             <li class="menu-top1"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUOEZWSEtBTDJDMlhVWE5KTVNKMEVFNkdPMy4u"target="_blank" ><i class="tiny material-icons" id="help">help_outline</i></a></li>
+
+             </div>
+          </ul>
+        </header>
+
+
+           <nav class="nav-color">
+                 <div class="container">
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                   <ul class="left hide-on-med-and-down">
+                      <li ><a href="index.html"><i class="material-icons" id="home">home</i></a></li>
+                      <li><a href="apie.html" >Apie</a></li>
+                      <li><a href="informacijos-istekliai.html">Informacijos ištekliai</a></li>
+                      <li><a href="mokslo.html">Mokslo ir meninio tyrimo darbai</a></li>
+                      <li><a href="paslaugos.html">Paslaugos</a></li>
+                      <li><a href="pagalba.html">Pagalba</a></li>
+                      <li><a class="active"href="duk.html">D.U.K</a></li>
+                      <li><a href="kontaktai.html">Kontaktai</a></li>
+              </div>
+            </nav>
+
+
+
+            <ul class="sidenav" id="mobile-demo">
+              <li><a href="index.html">PAGRINDINIS</a></li>
+              <li><a href="naujienos.html">NAUJIENOS</a></li>
+              <li><a href="kontaktai.html"> DARBO LAIKAS IR KONTAKTAI</a></li>
+              <li><a href="informacijos-istekliai.html">INFORMACIJOS IŠTEKLIAI</a></li>
+              <li><a href="mokslo.html">MOKSLO TYRIMO DARBAI</a></li>
+              <li><a href="paslaugos.html">PASLAUGOS</a></li>
+              <li><a href="pagalba.html">PAGALBA</a></li>
+              <li><a href="duk.html">D.U.K</a></li>
+              <li><a href="apie.html">APIE BIBLIOTEKĄ</a></li>
+           </ul>
+         </div>
+       </div>
+
+
+             <div id="headerwrap" id="home" name="home">
+               <div class="diagonal3">
+                 <div class="diagonal4">
+               <ul>
+                  <li><a href="https://lmta.lt" target="_blank"><img class="logo"src="images/lmta.png" alt=""></a></li>
+                  <li class="bibl"><a href="index.html" class="bibl6"> <h6>Lietuvos muzikos ir <br> teatro akademijos <br><span class="bold"> BIBLIOTEKA</span></h6></a></li> </ul>
+            </div>
+          </div>
+        </div>
+
+           <ul class="breadcrumb1">
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><i class="material-icons" id="right">keyboard_arrow_right</i></li>
+                <li><a class="active"href="duk.html">D.U.K</a></li>
+            </ul>
+
+
+        <div id="sidenav">
+         <br>
+         <div class="sectionImage" id="virsus"> <a href="db.html" id="se"> DUOMENŲ BAZĖS</a></div>
+         <div class="sectionImage"><a href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&local_base=lmt01&pds_handle=GUEST" target="_blank" id="se">EL. KATALOGAS</a></div>
+         <div class="sectionImage"><a href="kontaktai.html" id="se">KONTAKTAI</a></div>
+         <div class="sectionImage"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUNzlCS1UzSDhGMVpXOVlBV1pTS1dLRTFNVC4u" target="_blank" id="se">PASIŪLYK LEIDINĮ</a></div>
+         <p id="sectionTitle">GREITOS NUORODOS</p>
+       </div>
+
+         <div class="row">
+           <div class="col s12 m12 l12">
+            <div class="box-center5">
+              <p class="viduryje">Jei nerasite atsakymo į savo klausimą, <a class="link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUOEZWSEtBTDJDMlhVWE5KTVNKMEVFNkdPMy4u"target="_blank">užpildykite formą.</a></p>
+          </div>
+          </div>
+           <div class="col s12 m12 l1">
+             <div class="box-left">
+            </div>
+          </div>
+
+            <div class="col s12 m12 l10">
+            <h5>BENDRA BIBLIOTEKOS INFORMACIJA</h5>
+             <div class="accordion">
+               <div class="heading">
+                 <p>AR REIKIA REGISTRUOTIS BIBLIOTEKOJE?</p>
+               </div>
+
+                <div class="contents">
+                  <p>Akademijos bendruomenės nariams registruotis nereikia, kiti lankytojai turi registruotis bibliotekoje.</p>
+                </div>
+
+                <div class="heading">
+                  <p>AR REIKIA ĮSIGYTI SKAITYTOJO PAŽYMĖJIMĄ?</p>
+                </div>
+                <div class="contents">
+                  <p>Ne. Lankytojai aptarnaujami, jeigu pateikia asmens tapatybės dokumentą.</p>
+                </div>
+
+                 <div class="heading">
+                   <p>KUR GALĖČIAU SUSIPAŽINTI SU NAUDOJIMOSI BIBLIOTEKA TAISYKLĖMIS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Naudojimosi biblioteka taisykles rasite <a class="link" href="file/Naudojimosi-biblioteka-taisuklės.pdf" target="_blank">ČIA</a></p>
+                 </div>
+
+                 <div class="heading">
+                   <p>AR GALI BIBLIOTEKOS PASLAUGOMIS NAUDOTIS KITŲ UNIVERSITETŲ STUDENTAI?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Taip, kitų universitetų studentai gali lankytis skaityklose bei naudotis atviro fondo leidiniais, bet į namus leidiniai neišduodami.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KUR GALIU ATSISPAUSDINTI, KOPIJUOTI, SKENUOTI?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Spausdinimo, kopijavimo ir skenavimo savitarnos įrenginius galite rasti I, II ir IV rūmuose, esančius šalia bibliotekos.</p>
+                      <p>Naudojimosi daugiafunkciniu įrenginiu instrukciją rasite  <a class="link" href="https://lmta.lt/wp-content/uploads/2018/07/Kopjijavimo-Spausdinimo-savitarnos-sistemos-instrukcija.pdf" target="_blank">ČIA</a></p>
+                    <p>  Bibliotekos teikiamų spausdinimo, kopijavimo ir skenavimo paslaugų įkainiai <a  class="link"href="file/Kainos.docx">ČIA</a> </p>
+                 </div>
+               </div>
+
+               <h5>LEIDINIŲ UŽSAKYMAS IR GRĄŽINIMAS</h5>
+
+               <div class="accordion">
+                 <div class="heading">
+                   <p>KAIP IR KUR UŽSAKYTI LEIDINĮ?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Atlikite paiešką bibliotekos  <a  class="link" href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&local_base=lmt01" target="blank">el. kataloge</a> ir suradę leidinį, užsisakykite internetu pagal parengtą <a class="link" href="https://lmta.lt/wp-content/uploads/2018/07/Naudojimosi-bibliotekos-el.-katalogu-instrukcija.pdf" target="_blank">instrukciją.</a></p><p> Knygas užsisakyti gali registruoti vartotojai iš Muzikos fakulteto bibliotekos, Teatro ir kino fakulteto bibliotekos ir Klaipėdos fakulteto bibliotekos fondų.</p>
+                     <p>Leidinius atsiimkite bibliotekos padalinyje, kuriame užsakėte leidinį.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KAIP SUŽINOTI LEIDINIO GRĄŽINIMO DATĄ IR/ARBA PRATĘSTI LEIDINIO GRĄŽINIMO TERMINĄ?</p>
+                 </div>
+
+                 <div class="contents">
+                   <p>Prisijunkite prie <a  class="link" href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&local_base=lmt01" target="blank">LMTA bibliotekos katalogo</a> arba <a class="link" href="https://lmta.lvb.lt/primo_library/libweb/action/search.do?vid=LMTA&dscnt=2&prefLang=lt_LT&dstmp=1535539578848&fromLogin=true" target="blank">LMTA virtualios bibliotekos</a>(meniu piktograma „Prisijungti“).</p>
+                   <p>Viršutiniame meniu pasirinkite <span class="bold">„Mano paskyra“</span>, po to – <span class="bold">„Išduoti leidiniai“</span> (matysite leidinių grąžinimo datą).</p>
+                   <p>Jei norėsite leidinius prasitęsti, pasirinkite <span class="bold">„Pratęsti visus“</span> arba <span class="bold">„Pratęsti pažymėtus“</span>.</p>
+                   <p>Pranešimą apie artėjančią grąžinimo datą gausite LMTA el. paštu.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KUR GRĄŽINTI PASISKOLINTĄ LEIDINĮ IŠ BIBLIOTEKOS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Knygą grąžinkite ten, kur ji buvo išduota.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KAIP SKAIČIUOJAMI DELSPINIGIAI LAIKU NEGRĄŽINUS LEIDINIO?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Laiku negrąžinę išduotų leidinių skaitytojai už kiekvieną uždelstą dieną kiekvienam negrąžintam leidiniui privalo sumokėti delspinigius:</p>
+                   <p>0,03 EUR – jei leidinys buvo išduotas ilgesniam nei mėnuo terminui;</p>
+                   <p>0,29 EUR – jei leidinys buvo išduotas trumpesniam nei mėnesio laikotarpiui.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>AR YRA GALIMYBĖ UŽSAKYTI MOKSLUI IR STUDIJOMS REIKALINGUS LEIDINIUS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Taip. Bibliotekos fondas komplektuojamas pagal LMTA mokslo ir studijų kryptis. Parsisiųskite ir užpildykite <a class="link" href="file/Leidiniu-uzsakymo-forma.docx">leidinių užsakymo formą</a>.</p>
+                   <p>Užpildę formą, ją siųskite el. paštu adresu: biblioteka@lmta.lt.</p>
+                   <p>Daugiau informacijos tel. (8-5) 261 3841, (8-5) 262 2330</p>
+                 </div>
+               </div>
+               <h5>DUOMENŲ BAZĖS</h5>
+
+               <div class="accordion">
+                 <div class="heading">
+                   <p>KAS YRA PRENUMERUOJAMOS DUOMENŲ BAZĖS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Duomenų bazės, su kuriomis yra pasirašytos sutartys ir prie kurių biblioteka turi ilgalaikę prieigą.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KAS YRA TESTUOJAMOS DUOMENŲ BAZĖS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Duomenų bazės, prie kurių biblioteka turi laikiną prisijungimą, mėnesiui, dviem mėnesiams ar pusei metų. Siekiama, kad LMTA bendruomenė susipažintų su informacija, patalpinta duomenų bazėse, vėliau sprendžiama, kurios duomenų bazės bus prenumeruojamos, kurios ne.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KOKIAS DUOMENŲ BAZES PRENUMERUOJA LIETUVOS MUZIKOS IR TEATRO AKADEMIJA?</p>
+                 </div>
+                 <div class="contents">
+                   <p>LMTA prenumeruojamos duomenų bazės:</p>
+                    <p>  <a class="link" href="http://search.epnet.com/Community.aspx?authtype=ip&ugt=723731963C2635273796359632053E3221E366D36713659369E323E331133603&stsug=AjQFwxzb4Yc87qOXeagouQrt8fFbt3Moc3YDZFwE01mSViGOIjyLH9NaSkJSfJS0norpD8b5wqBN3Eg5iFXDmXUMLwaoUC_Lr1JA3thYLd5Cx2hiCM8cKWOovblp7J4gxYoo5Mn6HFonU6vZADdLvHMIBgvAkibrKpIFJFM2OHG-UFw&IsAdminMobile=N&encid=22D731163C6635373726357632753C37310376C377C375C379C373C371C376C33013" target="_blank">EBSCO</a> </p>
+                    <p>  <a class="link" href="https://www.tandfonline.com/" target="_blank">TAYLOR & FRANCIS</a> </p>
+                    <p>  <a class="link" href="https://www.jstor.org/" target="_blank">JSTOR</a> </p>
+                    <p>  <a class="link" href="https://www.naxosmusiclibrary.com/" target="_blank">NAXOS MUSIC LIBRARY</a> </p>
+                    <p>  <a class="link" href="http://www.oxfordmusiconline.com/" target="_blank">GROVE MUSIC ONLINE</a> </p>
+                    <p>  <a class="link" href="https://www.emeraldinsight.com/" target="_blank">EMERALD</a> </p>
+                    <p>  <a class="link" href="https://edu.medici.tv" target="_blank">MEDICI.TV</a> </p>
+                 </div>
+
+                 <div class="heading">
+                   <p>AR GALIU NAUDOTIS DUOMENŲ BAZĖMIS IŠ NAMŲ?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Taip, prisijungus prie LMTA tinklo per <a  class="link"href="https://login.ezproxy.lmta.lt/login" target="_blank">Ezproxy</a>, galima naudotis LMTA prenumeruojamomis, terminuotos prieigos duomenų bazėmis iš namų.</p>
+                   <p>LMTA bendruomenės nariai prisijungia vieningu vartotojo vardu ir slaptažodžiu:</p>
+                   <p>vardas: Jūsų LMTA sistemos prisijungimo vardas (LMTA el. paštas),</p>
+                   <p>slaptažodis: Jūsų LMTA sistemos slaptažodis (LMTA el. pašto slaptažodis).</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>AR GALIU IŠSAUGOTI INFORMACIJĄ (STRAIPSNIUS) IŠ DUOMENŲ BAZĖS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Taip, galite išsisaugoti nedidelį duomenų kiekį (1 straipsnis iš 1 žurnalo arba ~20% elektroninės knygos vieno prisijungimo metu), bet negalima nukopijuoti viso žurnalo. Duomenų bazių duomenys gali būti perkeliami į kompiuterį, spausdinami ir pan. Duomenų perdavimas tretiesiems asmenims, kėlimas į internetą ar naudojimas komerciniais tikslais griežtai draudžiamas.</p>
+                 </div>
+
+                 <div class="heading">
+                   <p>KUR GALĖČIAU RASTI DAUGIAU INFORMACIJOS APIE DUOMENŲ BAZES BEI NAUDOJIMĄSI JOMIS?</p>
+                 </div>
+                 <div class="contents">
+                   <p>Daugiau informacijos apie duomenų bazes rasite bibliotekos <a class="link" href="db.html" target="blank">interneto puslapyje</a> arba galite kreiptis į bibliotekos darbuotojas, el. paštu biblioteka@lmta.lt, tel. (8-5) 2613841</p>
+                 </div>
+                </div>
+
+                <h5>LMTA PUBLIKACIJOS IR BAIGIAMIEJI DARBAI (eLABa)</h5>
+
+                <div class="accordion">
+                  <div class="heading">
+                    <p>KOKIA BAIGAIMŲJŲ DARBŲ IR MOKSLO PUBLIKACIJŲ PATEIKIMO REGISTRAVIMUI ETD IR PDB TVARKA?</p>
+                  </div>
+                  <div class="contents">
+                    <p>Tvarkos aprašą rasite <a class="link" href="file/tvarkos-aprasas.docx" target="_blank">ČIA.</a></p>
+                  </div>
+
+                  <div class="heading">
+                    <p>KAIP PATALPINTI BAIGIAMĄJĮ DARBĄ Į ELABA SISTEMĄ?</p>
+                  </div>
+                  <div class="contents">
+                    <p>Tai galite padaryti prisijungdami prie <a class="link" href="https://talpykla.elaba.lt">eLABa talpyklos</a>.</p>
+                      <p>LMTA bendruomenės nariai prisijungia vieningu vartotojo vardu ir slaptažodžiu:</p>
+                      <p>vardas: Jūsų LMTA sistemos prisijungimo vardas (LMTA el. paštas),</p>
+                      <p>slaptažodis: Jūsų LMTA sistemos slaptažodis (LMTA el. paštas).</p>
+                      <p>Darbų talpinimo instrukciją rasite <a class="link" href="https://www.elaba.lt/elaba-portal/documents/19/21849/Studentui/06bbb430-83ed-4784-9d59-e492193fbd20" target="_blank"> ČIA</a></p>
+                  </div>
+
+
+                  <div class="heading">
+                    <p>KODĖL KAI KURIŲ DARBŲ ETD NELEIDŽIA SKAITYTI?</p>
+                  </div>
+                  <div class="contents">
+                    <p>Todėl, kad darbų autoriai apriboję prieigą. Darbus galėsite skaityti, kai prieigos ribojimas bus pasibaigęs.</p>
+                  </div>
+             </div>
+           </div>
+
+
+           <div class="col s12 m12 l1">
+             <div class="box-right">
+               <table class="el-katalogai">
+                 <tr>
+                   <td><a class="waves-effect default grey btn"href="https://aleph.library.lt/F?func=find-b-0&local_base=lmt01opac" target="_blank"id="ktalog">EL. KATALOGAS</a></td>
+                 </tr>
+                 <tr>
+                   <td><a class="waves-effect default grey btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUNzlCS1UzSDhGMVpXOVlBV1pTS1dLRTFNVC4u" target="_blank" id="ktalog">PASIŪLYK LEIDINĮ</a></td>
+                 </tr>
+
+                  <tr class="darbolaikas">
+                    <td><p class="bold">DARBO LAIKAS:</p>
+                      <p>I–V 9.00-18.00
+                      VI–VII nedirba</p>
+                      <p>Paskutinis mėnesio penktadienis – švaros diena. Skaitytojai neaptarnaujami</p>
+                      <p>Prieššventinę dieną biblioteka dirba viena valanda trumpiau</p></td>
+                  </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <div id="content"></div>
+  <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+  <div class="footer">
+
+      <div class="row">
+        <div class="col s12 m12 l3">
+        <p class="biblioteka">LIETUVOS MUZIKOS IR TEATRO AKADEMIJA</p>
+      <hr>
+        </div>
+        <div class="col s12 m12 l6">
+        <p>Muzikos fakulteto skaitykla:
+        Gedimino pr. 42, Vilnius, tel.: <a class="contact" href="tel:852628447">(8-5) 262 8447</a></p>
+        <p>Muzikos fakulteto biblioteka:
+        Vilniaus g. 6-2,Vilnius, tel.:<a class="contact"href="tel:852622330">(8-5) 262 2330</a></p>
+        <p>Teatro ir kino fakulteto biblioteka
+        T. Kosciuškos g. 10,Vilnius,tel.:<a class="contact"href="tel:852613841">(8-5) 261 3841</a></p>
+        <p>Klaipėdos fakulteto biblioteka:
+        K. Donelaičio g. 4, Klaipėda,tel.: :<a class="contact"href="846398799">(8 46) 39 87 99</a></p>
+        <p><a class="contact" href="mailto:biblioteka@lmta.lt" target="_top">El. paštas: biblioteka@lmta.lt</a></p>
+
+        </div>
+        <div id="copy" class="col s12 m12 l3">
+        <br>
+        <br>
+
+          <td class="ic"><a href="https://facebook.com/lmtabiblioteka" target="_blank"><img src="images/001.png" id="btnfb"></a><a href="https://print.lmta.lt" target="_blank"><img src="images/002.png" id="btnfb"></a><a href="https://mail.lmta.lt" target="_blank"><img src="images/003.png" id="btnfb"></a></td>
+          <p class="atnaujinta">2019 © LMTA biblioteka</p>
+           </div>
+          </div>
+         </div>
+        </div>
+      </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+
+
+      $(document).ready(function() {
+        var stickyNavTop = $('.nav-color').offset().top;
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop();
+        if (scrollTop > stickyNavTop) {
+          $('.nav-color').addClass('sticky');
+          }
+        else {
+          $('.nav-color').removeClass('sticky');
+          }
+        };
+          stickyNav();
+
+          $(window).scroll(function() {
+            stickyNav();
+          });
+        });
+
+        $(document).ready(function(){
+          $(".accordion").on("click", ".heading", function() {
+
+            $(this).toggleClass("active").next().slideToggle();
+
+            $(".contents").not($(this).next()).slideUp(300);
+
+            $(this).siblings().removeClass("active");
+         });
+        });
+        $(document).ready(function(){
+          $('.parallax').parallax();
+        });
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100,
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+  </body>
+</html>

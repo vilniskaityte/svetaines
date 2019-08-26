@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+     <link rel="stylesheet" href="css/css.css">
+     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+     <meta charset="UTF-8">
+     <style media="screen">
+     @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+     .accordion {
+       max-width: 75%;
+       background: linear-gradient(to bottom right, #ddd, #eee);
+       background: #eeee;
+       margin: 0 auto;
+       border-radius: 3px;
+
+     }
+     .heading {
+      color: rgb(62,60,59);
+       border-bottom: 1px solid #ddd;
+       padding: 15px;
+
+     }
+     .heading:nth-last-child(2){
+       border-bottom:0;
+     }
+     .heading:hover {
+       background: #eee;
+       border-radius: 0;
+     }
+     .heading:first-child:hover {
+       border-radius: 3px 3px 0 0;
+     }
+     .heading:nth-last-child(2):hover{
+       border-radius:0 0 3px 3px;
+     }
+     .heading::before {
+       content: '';
+       vertical-align: middle;
+       display: inline-block;
+       border-top: 10px solid grey;
+       border-left: 10px solid transparent;
+       border-right:10px solid transparent;
+       float: right;
+       transform: rotate(0);
+       transition: all 0.5s;
+       margin-top: 5px;
+     }
+     .active.heading::before {
+       transform: rotate(-180deg);
+     }
+     .not-active.heading::before {
+       transform: rotate(0deg);
+     }
+     .contents {
+       display: none;
+       background: #eee;
+       padding: 15px;
+       color: rgb(62,60,59);
+       line-height: 1.5;
+     }
+
+     #nuorodvir{
+       height:50px !important;
+       line-height: 1;
+       padding-top: 10px;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: 40px;
+       width: 150px;
+     }
+
+     #temine{
+       width: 250px;
+     }
+
+     @media screen and (max-width: 990px) {
+       .accordion {
+         width: 100%  !important;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+     }
+    }
+
+      @media screen and (max-width: 990px) {
+        .heading{
+          padding: 0px!important;
+     }
+    }
+
+
+    .pav{
+      padding-left:  50px !important;
+      margin-top: -600px !important;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+
+    @media screen and (max-width: 990px) {
+    .tabcontent{
+    margin-top:280px;
+      }
+    }
+
+    @media screen and (max-width: 990px) {
+    .tab{
+    margin-top: 10px;
+      }
+    }
+    @media screen and (max-width: 1225px) and (min-width: 990px) {
+        .tab button{
+          width: 150px;
+          margin-left: -50px;
+        }
+      }
+
+     .db5 {
+      padding-top: 0;
+      padding-bottom: 0;
+      }
+
+
+      table{
+        box-shadow: 3px 3px 3px 3px   #ddd;
+        background-color: #eee;
+      }
+
+
+      .sticky5 {
+        position: -webkit-sticky;
+        position: sticky;
+        top:6%;
+        background-color: #ddd;
+        color: rgb(62,60,59);
+        padding: 10px;
+        width: 100%;
+      }
+
+      .sticky5:before,
+      .sticky5:after {
+          content: '';
+          display: table;
+      }
+
+      #i{
+        width: 80px;
+        color: rgb(62,60,59);
+
+      }
+      #ir{
+        width: 200px;
+        color: rgb(62,60,59);
+      }
+
+      .turinys{
+        padding-top: 20px;
+        line-height: 0.6;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+        td th {
+          color: rgb(62,60,59) !important;
+          margin-top: -50px;
+          height: 2px;
+        }
+
+        tr{
+        }
+
+        .box-center{
+          background-color: #eee;
+          margin-right: 160px!important;
+          margin-top: 20px;
+        }
+
+        @media screen and (max-width: 990px) {
+          .box-center{
+            width: 100%;
+          }
+        }
+
+        @media screen and (max-width: 990px) {
+          #ir{
+            width: 20px;
+          }
+        }
+        .el-katalogai{
+            margin-top:-4px;
+            margin-left: -160px !important;
+            width: 220px;
+        }
+
+
+        .icon-bar {
+            position: fixed;
+            top: 50%;
+            -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+          }
+
+        .icon-bar a {
+          display: block;
+          text-align: center;
+          padding: 16px;
+          transition: all 0.3s ease;
+          color: white;
+          font-size: 20px;
+        }
+
+        .db5 img {
+          width:25px;
+        }
+
+        .link {
+          font-weight: bold;
+        }
+
+        .box-center{
+          background-color: inherit !important;
+        }
+        #headerwrap {
+          background: url(images/123.jpg) no-repeat center top;
+          margin-top:-15px;
+          text-align:center;
+          background-attachment: relative;
+          background-position: center center;
+          min-height: 200px;
+          width: 100%;
+          -webkit-background-size: 100%;
+          -moz-background-size: 100%;
+          -o-background-size: 100%;
+          background-size: 100%;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          margin-left: auto;
+        }
+          </style>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body background="images/3.jpg">
+
+      <header>
+         <ul>
+
+            <div class="menu5">
+              <li class="menu-top1"><a class="lt" href="index.html">LT</a></li>
+              <li class="menu-top1"><a href="en.html">EN</a></li>
+              <li class="menu-top1"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUOEZWSEtBTDJDMlhVWE5KTVNKMEVFNkdPMy4u"target="_blank" ><i class="tiny material-icons" id="help">help_outline</i></a></li>
+              </div>
+           </ul>
+         </header>
+
+
+            <nav class="nav-color">
+                  <div class="container">
+                   <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="left hide-on-med-and-down">
+                       <li ><a href="index.html"><i class="material-icons" id="home">home</i></a></li>
+                       <li><a href="apie.html" >Apie</a></li>
+                       <li><a class="active" href="informacijos-istekliai.html">Informacijos ištekliai</a></li>
+                       <li><a href="mokslo.html">Mokslo ir meninio tyrimo darbai</a></li>
+                       <li><a href="paslaugos.html">Paslaugos</a></li>
+                       <li><a href="pagalba.html">Pagalba</a></li>
+                       <li><a href="duk.html">D.U.K</a></li>
+                       <li><a href="kontaktai.html">Kontaktai</a></li>
+               </div>
+             </nav>
+
+
+             <ul class="sidenav" id="mobile-demo">
+               <li><a href="index.html">PAGRINDINIS</a></li>
+               <li><a href="naujienos.html">NAUJIENOS</a></li>
+               <li><a href="kontaktai.html"> DARBO LAIKAS IR KONTAKTAI</a></li>
+               <li><a href="informacijos-istekliai.html">INFORMACIJOS IŠTEKLIAI</a></li>
+               <li><a href="mokslo.html">MOKSLO TYRIMO DARBAI</a></li>
+               <li><a href="paslaugos.html">PASLAUGOS</a></li>
+               <li><a href="pagalba.html">PAGALBA</a></li>
+               <li><a href="duk.html">D.U.K</a></li>
+               <li><a href="apie.html">APIE BIBLIOTEKĄ</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+              <div id="headerwrap" id="home" name="home">
+                <div class="diagonal3">
+                  <div class="diagonal4">
+                <ul>
+                   <li><a href="https://lmta.lt" target="_blank"><img class="logo"src="images/lmta.png" alt=""></a></li>
+                   <li class="bibl"><a href="index.html" class="bibl6"> <h6>Lietuvos muzikos ir <br> teatro akademijos <br><span class="bold"> BIBLIOTEKA</span></h6></a></li> </ul>
+             </div>
+           </div>
+         </div>
+
+      <ul class="breadcrumb1">
+           <li><a href="index.html">Pagrindinis</a></li>
+           <li><i class="material-icons" id="right">keyboard_arrow_right</i></li>
+           <li><a  href="informacijos-istekliai.html">Informacijos ištekliai</a></li>
+           <li><i class="material-icons" id="right">keyboard_arrow_right</i></li>
+           <li><a href="temine-info.html">Teminė informacija</a></li>
+           <li><i class="material-icons" id="right">keyboard_arrow_right</i></li>
+           <li><a class="active" href="kinas.html">Kinas</a></li>
+       </ul>
+        <div id="sidenav">
+           <br>
+          <div class="sectionImage" id="virsus"> <a href="db.html" id="se"> DUOMENŲ BAZĖS</a></div>
+          <div class="sectionImage"><a href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&local_base=lmt01&pds_handle=GUEST" target="_blank" id="se">EL. KATALOGAS</a></div>
+          <div class="sectionImage"><a href="kontaktai.html" id="se">KONTAKTAI</a></div>
+          <div class="sectionImage"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUNzlCS1UzSDhGMVpXOVlBV1pTS1dLRTFNVC4u" target="_blank" id="se">PASIŪLYK LEIDINĮ</a></div>
+          <p id="sectionTitle">GREITOS NUORODOS</p>
+        </div>
+
+     <div class="row">
+        <div class="col s12 m12 l1">
+          <div class="box-left">
+         </div>
+       </div>
+
+       <div class="col s12 m12 l10">
+       <div class="box-center">
+         <h5 id="k">KINAS</h5>
+
+                <div class="turinys">
+              <div class="col s12 m12 l5">
+                <p><a href="#1" class="link">STRAIPSNIŲ DUOMENŲ BAZĖS</a></p>
+                <p><a href="#2" class="link">EL. ŽURNALAI</a></p>
+                <p><a href="#3" class="link">EL. KNYGOS</a></p>
+                <p><a href="#4" class="link">ATVIROSIOS PRIEIGOS ŠALTINIAI</a></p>
+                <p><a href="#5" class="link">DISERTACIJOS IR TEZĖS</a></p>
+              </div>
+              <div class="col s12 m12 l5">
+                <p><a href="#6" class="link">VAIZDO ŠALTINIAI</a></p>
+                <p><a href="#7" class="link">SCENARIJAI</a></p>
+                <p><a href="#8" class="link">ENCIKLOPEDIJOS</a></p>
+                <p><a href="#9" class="link">KITI ŠALTINIAI</a></p>
+                <p><a href="#10" class="link">ORGANIZACIJOS</a></p>
+              </div>
+              </div>
+              <br>
+
+              <div class="col s12 m12 l10">
+                <p >Leidiniai kino tematika LMTA bibliotekos <a class="link" href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&local_base=lmt01&pds_handle=GUEST" target="_blank"> kataloge(ALEPH)</a></p>
+                      <p>Dažniausiai naudojamos rubrikos/temos leidinių kino tematika paieškai, <br>
+                         naudodamiesi šių rubrikų pavyzdžiais galite suformuoti įvairias užklausas leidinių paieškai :</p>
+                      <ul>
+                      <ol><em>Kino filmai – Istorija</em></ol>
+                      <ol><em>Kino filmai – Istorija ir kritika</em></ol>
+                      <ol><em>Kino filmai – Pastatymai ir režisūra</em></ol>
+                      <ol><em>Kino filmai, lietuvių</em></ol>
+                      <ol><em>Kinematografija -- Lietuva</em></ol>
+                      <ol><em>Kino režisieriai ir prodiuseriai</em></ol>
+                      <ol><em>Kino aktoriai ir aktorės</em></ol>
+
+                    </ul>
+
+                    <div class="sidebar sticky5">
+                      <img src="images/3.3.png" alt=""> - Visatekstis dokumentas
+                      <img src="images/3.5.png" alt=""> - Prisijungimas su vartotojo vardu
+                      <img src="images/3.6.png" alt=""> - Atvira prieiga
+                      <br>
+                      <img src="images/3.4.png" alt=""> - Laisva prieiga
+                      <img src="images/3.7.png" alt=""> - vaizdo įrašas
+                      <img src="images/3.8.png" alt=""> - mokama
+
+                  </div>
+                  <br>
+                    <h6 class="pavadinimas" >STRAIPSNIŲ DUOMENŲ BAZĖS</h6>
+                    <table>
+                      <tr>
+                        <td class="db5" id="ir"><a class="link" href="https://www.lituanistikadb.lt/lt" target="_blank">Lituanistika</a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.5.png" alt=""></td>
+                        <td class="db5">Humanitarinių ir socialinių mokslų tyrimai, kurių objektas yra Lietuvos valstybės, visuomenės, kultūros, lietuvių tautos, kalbos raida ir dabartis.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://search.epnet.com"target="_blank" >EBSCO</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.5.png" alt=""></td>
+                        <td class="db5" id="2">Pateikiami įvairias mokslo sritis apimantys viso teksto mokslo žurnalai.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="https://www.jstor.org/" target="_blank"> Jstor </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.5.png" alt=""></td>
+                        <td class="db5">Mokslinių žurnalų archyvas, kuriame sukaupti viso teksto žurnalai meno, muzikos, istorijos, literatūros, kalbotyros, statistikos, ekonomikos, psichologijos, švietimo, teisės, politikos mokslų, matematikos, biologijos, ekologijos ir kitomis temomis.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5" > <a class="link" href="https://www.tandfonline.com/" target="_blank">Taylor and francis</a></td>
+                      <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.5.png" alt=""></td>
+                        <td class="db5">Duomenų bazėje pateikiami viso teksto moksliniai žurnalai humanitarinių, socialinių, fizinių, technologijos, biomedicinos ir žemės ūkio mokslų klausimais</td>
+                      </tr>
+                    </table>
+
+                    <br>
+                    <h6 class="pavadinimas">EL. ŽURNALAI</h6>
+                    <table class="v8">
+                      <tr>
+                        <td class="db5" id="ir"><a class="link" href="https://www.zurnalaskinas.lt/" target="_blank">Kinas</a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">Kino žurnalas</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://literaturairmenas.lt/zurnalo-archyvas"target="_blank" >Literatūra ir menas </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Skelbiami straipsniai apie kultūros gyvenimo įvykius, literatūrą, muziką, vaizduojamuosius menus, teatrą, kiną, architektūrą, kultūros paveldą, t. p. originaliosios ir verstinės grožinės literatūros kūriniai.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://kranturedakcija.lt/zurnalas-krantai" target="_blank"> Krantai </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Spausdina originalius ir verstinius straipsnius kultūros, meno, literatūros tematika.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.kulturosbarai.lt/" target="_blank">Kultūros barais</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Kultūros ir meno žurnalas skirtas profesionaliam įvairių meno reiškinių bei visuomeninių įvykių aptarimui ir kritikai.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.menufakultetas.vdu.lt/zurnalas-mik" target="_blank">Meno istorija ir kritika</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5" id="3">Meno istorijos, kritikos ir kultūros paveldo tyrimai. Vytauto Didžiojo universiteto leidžiamas žurnalas.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://sensesofcinema.com/about/" target="_blank">MSenses of cinema </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Senses of Cinema is an online journal devoted to the serious and eclectic discussion of cinema</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://sensesofcinema.com/about/" target="_blank">Media History Digital Library </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">E. žurnalų archyvas kino, televizijos, garso įrašymo istorjos tematika. Leidiniai 1905-1973 m.</td>
+                      </tr>
+                    </table>
+                    <br>
+                    <h6 class="pavadinimas">EL. KNYGOS</h6>
+                    <table>
+                      <tr>
+                        <td class="db5" id="ir"><a class="link" href="http://www.oapen.org/home" target="_blank">OAPEN Library </a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">Pateikiamos laisvai prieinamos mokslinės humanitarinių ir socialinių mokslų sričių e. knygos. Čia galima rasti ir atsisiųsti 73 įvairių meno sričių knygas.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://books.openedition.org/?lang=en"target="_blank" >OpenEdition Books </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5"  id="4">Humanitarinių ir socialinių mokslų biblioteka pateikia 38 leidėjų el. knygas, pusė iš jų yra atvirosios prieigos leidiniai. Čia rasite daugiau nei 140 el. knygų meno temomis (dailės, muzikos, architektūros, scenos meno, kino klausimais).</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.gutenberg.org/" target="_blank">Project Gutenberg</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Humanitarinių ir socialinių mokslų biblioteka pateikia 38 leidėjų el. knygas, pusė iš jų yra atvirosios prieigos leidiniai. Čia rasite daugiau nei 140 el. knygų meno temomis (dailės, muzikos, architektūros, scenos meno, kino klausimais).</td>
+                      </tr>
+                      <tr>
+                        <td class="db5" > <a class="link" href="http://books.google.com/" target="_blank">Google Book Search</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Viso teksto knygos įvairiomis temomis. Kai kurios knygos gali būti pilnai neprieinamos dėl autorinių teisių apribojimų </td>
+                      </tr>
+                      <br>
+                    </table>
+                    <br>
+                    <h6 class="pavadinimas">ATVIROSIOS PRIEIGOS ŠALTINIAI</h6>
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="http://www.epaveldas.lt/vbspi/content/simpleSearch.jsp;jsessionid=0a00016630d56dc880b24db1460e9dd29a470e0813dd.e34Pb3uSbh0Ob40MaheKbhuMa38Ne0" target="_blank">Epaveldas</a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.6.png" alt=""> </td>
+                        <td class="db5">Bibliotekų, archyvų ir muziejų suskaitmenintų kultūros paveldo objektų (tarp jų  senosios lietuviškos knygos (1547–1863) ir lietuviškos periodinės spaudos (1864 – 1940 m.)) duomenų bankas.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="https://doaj.org/"target="_blank" >Directory of Open Access Journals (DOAJ)</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.6.png" alt=""></td>
+                        <td class="db5">Kataloge pateikiamas atvirosios prieigos žurnalų sąrašas, kuriame įtraukti žurnalai užtikrina nemokamą prieigą prie viso teksto straipsnių, straipsnių kokybę kontroliuoja žurnalų redakcinės kolegijos. Į katalogą įtraukta beveik 10 000 žurnalų, tarp jų 32 Lietuvos žurnalai.  </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.doabooks.org/doab" target="_blank"> DOAB: Directory of Open access Books
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.6.png" alt=""></td>
+                        <td class="db5" id="5">Atvirosios prieigos el. knygų katalogas, kuriame, 2014 m. gegužės mėn. duomenimis, prieinama 64 leidėjų beveik 2 000 atvirosios prieigos el. knygų. Knygos licencijuojamos kūrybinių bendrijų (angl. Creative Commons) licencijomis.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.opendoar.org/" target="_blank">OpenDOAR </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.6.png" alt=""></td>
+                        <td class="db5">Atviros prieigos talpyklų registras. </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.oapen.org/" target="_blank">OAPEN</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.6.png" alt=""></td>
+                        <td class="db5">Atvirosios prieigos socialinių bei humanitarinių mokslų visateksčių akademinių el. knygų biblioteka. </td>
+                      </tr>
+                    </table>
+                    <br>
+                    <h6 class="pavadinimas">DISERTACIJOS IR TEZĖS</h6>
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="https://db.lmt.lt/lt/perziura/disertacijos/d-db.html" target="_blank">Lietuvos mokslo tarybos disertacijų gynimų duomenų bazė </a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">Šioje duomenų bazėje yra įtraukiamos Lietuvoje nuo 2006 m. apgintos ir numatomos ginti disertacijos.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="https://lnb.libis.lt/index.jsp"target="_blank" >Lietuvos nacionalinės M. Mažvydo bibliotekos katalogas</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Lietuvoje apgintos disertacijos saugomos Lietuvos nacionalinės Martyno Mažvydo bibliotekos rankraščių fonde. Ieškodami jų bibliotekos elektroniniame kataloge, paieškos langelyje Bet koks žodis įrašykite disertacija.
+                        Bibliografinė duomenų bazė.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://elaba.lvb.lt/primo_library/libweb/action/search.do?vid=ELABA" target="_blank"> Lietuvos studijų baigiamųjų darbų ir disertacijų duomenų bazė (ETD)
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Duomenų bazė, kurioje kaupiami bakalauro, magistro darbai, apginti Lietuvoje nuo 2003 m., ir disertacijos. Prieiga prie kai kurių darbų yra ribojama ar galima tik institucijos kompiuterių tinkle.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.dart-europe.eu/basic-search.php" target="_blank">DART Europe</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Elektroninių tezių registras, pateikiantis prieigą prie daugiau nei 200 000 visateksčių tezių ir disertacijų iš daugiau nei 300 įvairių Europos universitetų.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="https://www.ebsco.com/products/research-databases/ebsco-open-dissertations" target="_blank">EBSCO Open Dissertations</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Atviros prieigos elektroninių tezių bei disertacijų talpykla (virš 800 tūkst. tezių ir disertacijų)  </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="https://oatd.org/" target="_blank">Open Access Theses and Dissertations</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5" id="6">This is an index of over 3.5 million electronic theses and dissertations (ETDs). To the extent possible, the index is limited to records of graduate-level theses that are freely available online.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="https://www.base-search.net/Search/Advanced" target="_blank">World Cat</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Disertacijos WorlCat kataloge. Bibliografinė duomenų bazė</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="https://ethos.bl.uk/Home.do;jsessionid=2F6159CABDC4B8F9A0E7AC7E5FDFAC93" target="_blank">EThOS</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">British Library EThOS service.. Search across 480000+ theses for free and order full text quickly and easily.</td>
+                      </tr>
+                    </table>
+                    <br>
+
+
+                    <h6 class="pavadinimas">VAIZDO ŠALTINIAI</h6>
+
+                        <p>Kino filmų paieška<a class="link" href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&local_base=lmt01&pds_handle=GUEST" target="_blank">  LMTA bibliotekos kataloge</a></p>
+                        Filmų paieškai naudokite/paieškos lauke rašykite filmo pavadinimą, režisierių  ir pan. Naudokite užklausos filtrus : pasirinkite </<em>–Dokumento rūšis—Vaizdo įrašai</em></p>
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="https://www.kinofondas.lt/" target="_blank">Kino fondas</a></td>
+                        <td class="db5" id="i"><img src="images/3.7.png" alt=""><img src="images/3.8.png" alt=""></td>
+                        <td class="db5">Lietuviškų filmų archyvas.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="https://www.lrt.lt/mediateka/irasai#/category/6"target="_blank" >LRT mediateka</a></td>
+                        <td class="db5"><img src="images/3.7.png" alt=""></td>
+                        <td class="db5"  id="7">Filmų archyvas LRT mediatekoje
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="https://www.zmonescinema.lt/lt " target="_blank">Žmonės Cinema
+                        </a></td>
+                        <td class="db5"><img src="images/3.7.png" alt=""><img src="images/3.8.png" alt=""></td>
+                        <td class="db5">Įvairūs kino filmai</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://archive.org/details/movies" target="_blank">Archive.org: Public domain films online</a></td>
+                        <td class="db5"><img src="images/3.7.png" alt=""><img src="images/3.8.png" alt=""></td>
+                        <td class="db5">This library contains thousands of digital movies uploaded by Archive users which range from classic full-length films, to daily alternative news broadcasts, to cartoons and concerts. Many of these videos are available for free download.</td>
+                      </tr>
+
+                    </table>
+
+                    <br>
+
+
+                    <h6 class="pavadinimas">SCENARIJAI</h6>
+
+
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="http://www.imsdb.com" target="_blank">IMSDB – Internet Movie Screenplay Database </a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">IMDB has proven a valuable resource for researching movie crews, casts, and trivia. IMSDB is just as useful for those looking for screenplays of all kinds and genres</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.script-o-rama.com/snazzy/table.html"target="_blank" >Drew’s Script-o-Rama</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">The titular Drew has been sharing scripts with curious readers and writers for almost two decades now, and has a vast library from which to choose from. A great benefit of Script-O-Rama is that it holds several drafts of certain movies, an invaluable resource for those who want to see how a Hollywood film evolves in the writing process.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.simplyscripts.com/movie.html" target="_blank">Simply Scripts
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Simply Scripts has a wide, diverse library that also includes plays and non-English screenplays. It’s also constantly updated, providing scripts to current movies such as Interstellar and Foxcatcher.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.awesomefilm.com/s" target="_blank">AwesomeFilm	</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">AwesomeFilm is another resource with dozens of scripts you can download with a single click, alphabetized for easy searching. If you’re looking for a screenplay to read, this site is, well, awesome..</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.moviescriptsandscreenplays.com/" target="_blank">Movie Scripts and Screenplays</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5" id="8">You’ve got to love the straightforward title. Movie Scripts and Screenplays gives you exactly what it says, with a long list of manuscripts that you can also directly find with its search function.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.screenplaydb.com/film/all" target="_blank">The Screenplay Database</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">The Screenplay Database is another useful resource with a large choice of scripts to choose from. If you’re interested in a certain type of film, the website also allows you to search its library by genre, to better allow you to window shop and find something you didn’t even know you were looking for.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5" > <a class="link" href="http://www.dailyscript.com/movie.html" target="_blank">The Daily Script</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">The Daily Script offers a ton of screenplays in a very simple, easy-to-navigate layout. It keeps things homey for the typical screenwriter, even using Courier New as its primary font.</td>
+                      </tr>
+
+
+                    </table>
+                    <br>
+
+
+                    <h6 class="pavadinimas">ENCIKLOPEDIJOS</h6>
+
+
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="http://www.literatura.lt/" target="_blank">Lietuvių literatūros enciklopedija</a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">Lietuvių literatūros enciklopedija</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.symbols.com/"target="_blank" >Symbols.com</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Ženklų ir ideogramų enciklopedija
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.cinematographers.nl/ " target="_blank">IEC
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Internetinė kinematografijos ir kino operatorių enciklopedija</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.mythweb.com/encyc/" target="_blank">Encyclopedia of Greek Mythology</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Encyclopedia of Greek Mythology</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.pantheon.org/mythica.html" target="_blank">The Encyclopedia Mythica</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5" id="9">Mitologijos, folkloro ir religijos enciklopedija</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.musicals101.com/" target="_blank">The Cyber Encyclopedia of Musical Theatre, TV and Film</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">The Cyber Encyclopedia of Musical Theatre, TV and Film</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.christiananswers.net/dictionary/home.html" target="_blank">WebBible Encyclopedia</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">WebBible Encyclopedia</td>
+                      </tr>
+                    </table>
+                    <h6 class="pavadinimas" id="10">ORGANIZACIJOS</h6>
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="https://www.kinosajunga.lt " target="_blank">Lietuvos kinematografininkų sąjunga</a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">Lietuvos kinematografininkų mėgėjų sąjunga įkurta 1931 m.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.bfi.org.uk/"target="_blank" >British Film Institute</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">The British Film Institute is the UK national agency with responsibility for encouraging the arts of film and television and conserving them in the national interest.  It includes highly extensive archives of materials from around the world.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.deutsches-filminstitut.de/" target="_blank">Deutsches Filminstitut
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">DIF is the oldest cinematic institution in Germany and also one of the country's largest.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.filmdirectors.eu/" target="_blank">FERA
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Europos kino režisierių federacijos</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.fiafnet.org/" target="_blank">International Federation of Film Archives
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">The International Federation of Film Archives (FIAF) brings together institutions dedicated to rescuing films both as cultural heritage and as historical documents. FIAF is a collaborative association of more than 120 film archives in over 65 countries.</td>
+                      </tr>
+                    </table>
+                    <br>
+                    <h6 class="pavadinimas">KITI ŠALTINIAI</h6>
+                    <table>
+                      <tr>
+                        <td class="db5"id="ir"><a class="link" href="http://www.lkc.lt/ " target="_blank">Lietuvos kino centras </a></td>
+                        <td class="db5" id="i"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""> </td>
+                        <td class="db5">Įvairi informacija kino tematika (kino industrija, finansavimas, sklaida, filmų duomenų bazė ir kt.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://www.cinema.lt/ "target="_blank" >Cinema.lt</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Portalas apie kiną Lietuvoje</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"><a class="link" href="http://kinfo.lt/ " target="_blank">Kinfo
+                        </a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Lietuvos kino naujienų tinklalapis. Puslapyje talpinama įvairi ir aktuali informacija apie kino filmus, kino industrijos įvykius ir renginius; interviu su Lietuvos kino kūrėjais, reportažai iš kino renginių ir premjerų</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.kinas.info/" target="_blank">Kinas.info</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Informacija apie kiną, filmų recenzijos, tikslus seansų laikas</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.lfc.lt/lt" target="_blank">Lietuvių filmo centras</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">informacija apie lietuvių filmus, kūrėjus, įvairūs straipsniai</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.scanorama.lt/" target="_blank">Scanorama</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Europos šalių kino forumas</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://kinopavasaris.lt/" target="_blank">Vilniaus kino festivalis Kino pavasaris</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Kino pavasasris" interneto svetainė</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://jonasmekas.com/diary/" target="_blank">Jonas Mekas</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Jono Meko interneto svetainė</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="https://imdb.com/" target="_blank">IMDB (Internet Movie Database)</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">IMDb covers an enormous number of movies from around the world, starting with the earliest ones, and provides plot synopses, movie credits, and many other details about the films.  It is probably the best known such resource, in part because it's freely available on the web. However, for some information (such as exact release dates in US and the world), Film Indexes Online (above) may be the better resource</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://allmovie.com/" target="_blank">All-Movie Guide</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">A database of movies, actors/actressess, producers, directors and cast members. Entries include a detailed plot synopsis and short bios, as well as much other information.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.indiewire.com/" target="_blank">IndieWIRE</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Online resource for independent filmmakers.</td>
+                      </tr>
+                      <tr>
+                        <td class="db5"> <a class="link" href="http://www.filmsite.org/" target="_blank">Greatest Films (FilmSite)</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Filmsite.org is an award-winning website for classic film buffs, students, moviegoers and anyone else interested in the great movies of the last century. The site also contains film analysis, original content, information on the top films and most memorable movie scenes, "Best of..." articles, and the most popular film quotes in all genres of film</td>
+                      </tr>
+                      <tr>
+                        <td class="db5" > <a class="link" href="http://lumiere.obs.coe.int/" target="_blank">Lumiere</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">Lumiere provides data on admissions to films released in European cinemas since 1996. It is searchable by film title, director, production year (from 1913 to one year ago), exhibition year (from 1996 to one year ago), and production or co-production country</td>
+                      </tr>
+                      <tr>
+                        <td class="db5" > <a class="link" href="http://www.soundtrack.net/" target="_blank">SoundtrackNet</a></td>
+                        <td class="db5"><img src="images/3.3.png" alt=""><img src="images/3.4.png" alt=""></td>
+                        <td class="db5">SoundtrackNet aims to centralize Internet resources relating to the genre of film and television music.</td>
+                      </tr>
+                    </table>
+                    <br>
+
+              </div>
+            </div>
+          </div>
+
+
+      <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+      <div class="col s12 m12 l1">
+        <div class="box-right">
+          <table class="el-katalogai">
+            <tr>
+              <td><a class="waves-effect default grey btn"href="https://aleph.library.lt/F?func=find-b-0&local_base=lmt01opac" target="_blank"id="ktalog">EL. KATALOGAS</a></td>
+            </tr>
+            <tr>
+              <td><a class="waves-effect default grey btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUNzlCS1UzSDhGMVpXOVlBV1pTS1dLRTFNVC4u" target="_blank" id="ktalog">PASIŪLYK LEIDINĮ</a></td>
+            </tr>
+
+             <tr class="darbolaikas">
+               <td><p class="bold">DARBO LAIKAS:</p>
+                 <p>I–V 9.00-18.00
+                 VI–VII nedirba</p>
+                 <p>Paskutinis mėnesio penktadienis – švaros diena. Skaitytojai neaptarnaujami</p>
+                 <p>Prieššventinę dieną biblioteka dirba viena valanda trumpiau</p></td>
+             </tr>
+       </table>
+     </div>
+    </div>
+  </div>
+
+
+
+
+       <div class="footer">
+
+           <div class="row">
+             <div class="col s12 m12 l3">
+             <p class="biblioteka">LIETUVOS MUZIKOS IR TEATRO AKADEMIJA</p>
+             <hr>
+             </div>
+             <div class="col s12 m12 l6">
+             <p>Muzikos fakulteto skaitykla:
+             Gedimino pr. 42, Vilnius, tel.: <a class="contact" href="tel:852628447">(8-5) 262 8447</a></p>
+             <p>Muzikos fakulteto biblioteka:
+             Vilniaus g. 6-2,Vilnius, tel.:<a class="contact"href="tel:852622330">(8-5) 262 2330</a></p>
+             <p>Teatro ir kino fakulteto biblioteka
+             T. Kosciuškos g. 10,Vilnius,tel.:<a class="contact"href="tel:852613841">(8-5) 261 3841</a></p>
+             <p>Klaipėdos fakulteto biblioteka:
+             K. Donelaičio g. 4, Klaipėda,tel.: :<a class="contact"href="846398799">(8 46) 39 87 99</a></p>
+             <p><a class="contact" href="mailto:biblioteka@lmta.lt" target="_top">El. paštas: biblioteka@lmta.lt</a></p>
+
+             </div>
+             <div id="copy" class="col s12 m12 l3">
+             <br>
+             <br>
+
+               <td class="ic"><a href="https://facebook.com/lmtabiblioteka" target="_blank"><img src="images/001.png" id="btnfb"></a><a href="https://print.lmta.lt" target="_blank"><img src="images/002.png" id="btnfb"></a><a href="https://mail.lmta.lt" target="_blank"><img src="images/003.png" id="btnfb"></a></td>
+               <p class="atnaujinta">2019 © LMTA biblioteka</p>
+            </div>
+           </div>
+          </div>
+         </div>
+       </div>
+
+
+
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+      <script type="text/javascript">
+
+
+            $(function(){
+              $('.mainAccordion .accordion').on('click', function(){
+
+                $(this).next('.content', this).slideToggle().siblings('.content').slideUp();
+
+                $(this).find('i').toggleClass('fa-minus').end().siblings('.accordion').find('i').removeClass('fa-minus');
+              });
+            });
+
+            $(document).ready(function(){
+              $('.sidenav').sidenav();
+            });
+
+
+
+            $(document).ready(function() {
+              var stickyNavTop = $('.nav-color').offset().top;
+              var stickyNav = function(){
+                var scrollTop = $(window).scrollTop();
+              if (scrollTop > stickyNavTop) {
+                $('.nav-color').addClass('sticky');
+                }
+              else {
+                $('.nav-color').removeClass('sticky');
+                }
+              };
+                stickyNav();
+
+                $(window).scroll(function() {
+                  stickyNav();
+                });
+              });
+
+
+              function openTab(evt, tabName) {
+                 var i, tabcontent, tablinks;
+                 tabcontent = document.getElementsByClassName("tabcontent");
+                 for (i = 0; i < tabcontent.length; i++) {
+                   tabcontent[i].style.display = "none";
+                 }
+                 tablinks = document.getElementsByClassName("tablinks");
+                 for (i = 0; i < tablinks.length; i++) {
+                   tablinks[i].className = tablinks[i].className.replace(" active", "");
+                 }
+                 document.getElementById(tabName).style.display = "block";
+                 evt.currentTarget.className += " active";
+               }
+                 document.getElementById("defaultOpen").click();
+
+
+                 $(document).ready(function(){
+                   $(".accordion").on("click", ".heading", function() {
+
+                     $(this).toggleClass("active").next().slideToggle();
+
+                     $(".contents").not($(this).next()).slideUp(300);
+
+                     $(this).siblings().removeClass("active");
+                  });
+                 });
+
+                 var stickyElements = document.getElementsByClassName('sticky5');
+
+                 for (var i = stickyElements.length - 1; i >= 0; i--) {
+                     Stickyfill.add(stickyElements[i]);
+                 }
+
+
+                 if ($('#back-to-top').length) {
+                     var scrollTrigger = 100,
+                         backToTop = function () {
+                             var scrollTop = $(window).scrollTop();
+                             if (scrollTop > scrollTrigger) {
+                                 $('#back-to-top').addClass('show');
+                             } else {
+                                 $('#back-to-top').removeClass('show');
+                             }
+                         };
+                     backToTop();
+                     $(window).on('scroll', function () {
+                         backToTop();
+                     });
+                     $('#back-to-top').on('click', function (e) {
+                         e.preventDefault();
+                         $('html,body').animate({
+                             scrollTop: 0
+                         }, 700);
+                     });
+                 }
+                 for (var i = stickyElements.length - 1; i >= 0; i--) {
+                     Stickyfill.add(stickyElements[i]);
+                 }
+
+                 </script>
+    </body>
+  </html>

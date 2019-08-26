@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/1owl.carousel.min.css">
+      <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
+
+    <style media="screen">
+
+        body{
+          font-family:Georgia,sans-serif;
+        }
+
+        a{
+          color: black !important;
+        }
+        /* header */
+        .nav-color{
+            background-color:#eeeeee;
+            
+        }
+
+        nav a, li{
+            color: black !important;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sticky{
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            border-top: 0;
+        }
+
+        .logo{
+            margin-left:30px;
+            margin-top:10px;
+            height: 70px;
+            padding-right:50px;
+         }
+
+        a{
+            color: black;
+        }
+
+        ul{
+           list-style-type: none;
+           overflow: hidden;
+        }
+
+       li{
+          float: left;
+       }
+
+       li a{
+          display: block;
+       }
+
+      .menu-top{
+          float:right;
+          padding-right: 50px;
+          padding-top: 50px;
+      }
+
+      .fb{
+          width: 40px;
+          float:right;
+          margin-top: 20px;
+          margin-right: 20px;
+      }
+
+
+      .diagonal{
+        background: -webkit-linear-gradient( 230deg , transparent 60%, rgba(209, 209, 209, 0.4) 50% ) !important;
+      }
+      .diagonal5{
+        background: -webkit-linear-gradient( -230deg , transparent 80%, rgba(209, 209, 209, 0.6) 25% ) !important;
+      }
+
+  /* header pabaiga */
+
+      .box-center {
+          background: #eeeeee ;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          margin-bottom: 30px;
+          margin-top: 30px;
+      }
+
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .btn:hover {
+            background-color: #cc493d;
+          }
+
+        th, td, tr {
+            border: none !important;
+        }
+
+        .naujienos {
+            width: 150px;
+            padding: 20px;
+            background-color: #ddd;
+        }
+
+        .pavadinimas {
+            padding-top: 50px;
+            color:black;
+            text-align: center;
+        }
+
+
+        .box-center-1{
+            margin-top:30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .data{
+          color:grey;
+          font-size: 12px;
+          text-align: right!important;
+          padding-right: 20px;
+        }
+
+
+        /* SEARCH BOX */
+
+        .search-box{
+            width: 800px;
+            margin-top: 180px;
+        }
+
+
+        .material-icons{
+            color: black !important;
+            font-size: 30px !important;
+        }
+
+        .ieskoti {
+            background:none;
+            border: none;
+            margin-top: 18px;
+        }
+
+        .ieskoti:hover{
+            background-color: transparent;
+        }
+
+        .virtuali {
+          text-align: center;
+          background-color: rgb(204,73,61, 0.8);
+          height: 38px;
+          padding-top: 1px;
+          color:white;
+        }
+
+            /* OWL */
+        .item {
+          width: 80%;
+          display: block;
+          margin-top: 50px;
+        }
+
+        .owl-nav > div {
+          margin-top: -10px;
+          position: absolute;
+          top: 50%;
+          color: black;
+        }
+
+        /*footer  */
+
+
+        .footer{
+          background-color:#e0e0e0;
+          margin: 0 auto;
+          color: black;
+          text-align: center;
+          font-size: 12px;
+          padding-top:20px;
+        }
+
+        .biblioteka{
+           padding-top: 40px;
+        }
+
+        #copy{
+          padding-top: 40px;
+          float: right;
+        }
+
+        .contact{
+           color:black;
+        }
+
+        .contact:hover{
+           color: #cc493d !important;
+        }
+
+        .diagonal3{
+           background: -webkit-linear-gradient( -57.5deg , transparent 60%, rgba(209, 209, 209, 0.6) 50% ) !important;
+        }
+        .diagonal4{
+           background: -webkit-linear-gradient( 57.5deg , transparent 80%, rgba(209, 209, 209, 0.9) 25% ) !important;
+        }
+
+
+
+
+
+
+.nav li {
+  text-align: center;
+}
+.nav li a {
+  background: #D8E9FB;
+  border-top: 1px solid rgba(56,56,56,0.2);
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 25px 0 20px;
+  color: #AD1F1F;
+  font-size: 16px;
+  background-position: 0 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, white 50%);
+  transition: background-position .2s ease-out 0s;
+  background-size: 200.22% auto;
+}
+.nav li a:focus {
+  background: white;
+  color: black;
+}
+
+.nav li a:hover {
+  background-position: -99.99% 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, white 50%);
+}
+
+    </style>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <meta charset="UTF-8">
+   </head>
+   <body background="images/3.jpg">
+
+     <header>
+        <ul>
+           <li><a href="https://lmta.lt" target="_blank"><img class="logo"src="images/lmta.png" alt=""></a></li>
+           <li><a href="index.html"><h3>BIBLIOTEKA</h3></a></li>
+           <li class="fb"><a href="https://facebook.com/lmtabiblioteka" target="_blank"><img class="fb"src="images/dds.png" alt=""></a></li>
+           <li class="menu-top"><a href="klausk.html">KLAUSK</a></li>
+        </ul>
+      </header>
+
+      <nav class="nav-color">
+        <div class="diagonal5">
+          <div class="diagonal">
+            <div class="container">
+             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                 <li><a href="index.html">PAGRINDINIS</a></li>
+                 <li><a href="paslaugos.html">PASLAUGOS</a></li>
+                 <li><a href="apie.html">APIE BIBLIOTEKĄ</a></li>
+         </div>
+       </nav>
+
+       <ul class="sidenav" id="mobile-demo">
+         <li><a href="index.html">PAGRINDINIS</a></li>
+         <li><a href="paslaugos.html">PASLAUGOS</a></li>
+         <li><a href="apie.html">APIE BIBLIOTEKĄ</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+                          <!--PARALLAX  -->
+
+
+
+
+                <div class="parallax-container">
+                  <div class="parallax">
+                    <img src="images/101.jpg" />
+
+
+
+
+          </div>
+
+
+
+
+                            <!--PAIESKA  -->
+          <div class="container">
+           <div class="search-box">
+            <div class="virtuali">
+              <h6>PAIEŠKA VIRTUALIOJE BIBLIOTEKOJE</h6>
+             </div>
+            <nav class="white">
+             <div class="nav-wrapper">
+              <div class="input-field">
+                <form accept-charset="utf-8" name="searchForm" method="get" action="https://lmta.lvb.lt/primo-explore/search?vid=LMTA&lang=lt_LT&sortby=rank"
+                enctype="application/x-www-form-urlencoded; charset=utf-8" target="_blank" onsubmit="searchPrimo()">
+                <input name="iehack" type="hidden" value="☠">
+                <input name="institution" type="hidden" value="LMTA">
+                <input name="vid" type="hidden" value="LMTA">
+                <input name="tab" type="hidden" value="default_tab">
+                <input name="search_scope" type="hidden" value="LMTA">
+                <input name="prefLang" type="hidden" value="lt_LT">
+                <input name="query" type="hidden" id="primoQuery">
+                <input id="search" type="search"  placeholder="Įveskite paieškos žodį ar frazę..." >
+                <i class="material-icons">
+                <button type="submit" class="ieskoti">
+                <span class="material-icons">search</span></button></i>
+                </form>
+               </div>
+             </div>
+            </nav>
+           </div>
+          </div>
+        </div>
+
+                          <!--DESTYMAS-->
+       <div class="row">
+
+         <div class="col s12 m12 l3">
+         <ul class="nav">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Location and facilities</a></li>
+        <li><a href="#">Agricultual concerns</a></li>
+      </ul>
+                        <!--CENTRAS NAUJIENOS BIBLIOTEKOJE-->
+</div>
+
+
+
+
+        <div class="col s12 m12 l9">
+             <div class="box-center">
+                <table>
+                   <tr>
+                     <th class="pavadinimas" colspan="2">TESTUOJAMA MEDICI.TV DUOMENŲ BAZĖ</th>
+                   </tr>
+                   <tr>
+                     <td><img class="naujienos"src="images/download.jpg" alt=""></td>
+                     <td><p> Iki š.m. gruodžio 5 d. akademijos bendruomenės nariams suteikta prieiga prie klasikinės muzikos video įrašų kolekcijos Medici.tv. Duomenų bazę sudaro koncertai, operų ir baletų įrašai, dokumentiniai filmai, menininkų portretai, edukacinės programos, taip pat yra galimybė stebėti koncertus realiuoju laiku.
+                      Jungiantis iš LMTA kompiuterių tinklo prisijungimo slaptažodis nereikalingas.
+                      Norint duomenų bazėmis naudotis iš kitų kompiuterių (namuose ir kt.), reikia prisijungti per nuotolinę prieigą EZPROXY</p>
+                      <p class="data">2018-11-15</p></td>
+                   </tr>
+                   <tr>
+                     <th class="pavadinimas" colspan="2">PATOBULINTAS PRISIJUNGIMAS PRIE DAUGIAFUNKCIO KOPIJAVIMO ĮRENGINIO</th>
+                   </tr>
+                   <tr>
+                     <td><img class="naujienos" src="images/ee.png" alt=""></td>
+                     <td><p>Įdiegtas prisijungimas prie įrenginio trečiuoju būdu – naudojant PIN kodą. Prisijungę prie print.lmta.lt, sistema sugeneruos šešių skaitmenų PIN kodą. Tad jungdamiesi prie įrenginio užteks įvesti tik Jums paskirtą kodą. (Šis prisijungimo būdas rekomenduotinas tiems, kurie neturi studento pažymėjimo) PIN kodo generavimo instrukcija.</p><p class="data">2018-09-15</p></td>
+                 </tr>
+              </table>
+            </div>
+          </div>
+
+
+
+        <div class="col s12 m12 l3">
+        </div>
+
+        <div class="col s12 m12 l6">
+        <h5 class="pavadinimas">NAUJI LEIDINIAI</h5>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="images/Paveikslėlis1.jpg">
+            </div>
+            <div class="item">
+                <img src="images/Paveikslėlis2.jpg">
+            </div>
+            <div class="item">
+                <img src="images/Paveikslėlis1.jpg">
+            </div>
+            <div class="item">
+                <img src="images/Paveikslėlis4.jpg">
+            </div>
+            <div class="item">
+                <img src="images/Paveikslėlis5.jpg">
+            </div>
+            <div class="item">
+                <img src="images/Paveikslėlis4.jpg">
+            </div>
+        </div>
+        </div>
+
+      <div class="col s12 m12 l3">
+      </div>
+
+    </div>
+
+    <div class="footer">
+     <div class="diagonal3">
+       <div class="diagonal4">
+        <div class="row">
+          <div class="col s12 m12 l3">
+          <p class="biblioteka">LIETUVOS MUZIKOS IR TEATRO AKADEMIJA</p>
+          </div>
+          <div class="col s12 m12 l6">
+          <p>Muzikos fakulteto skaitykla:
+          Gedimino pr. 42, Vilnius, tel.: <a class="contact" href="tel:852628447">(8-5) 262 8447</a></p>
+          <p>Muzikos fakulteto biblioteka:
+          Vilniaus g. 6-2,Vilnius, tel.:<a class="contact"href="tel:852622330">(8-5) 262 2330</a></p>
+          <p>Teatro ir kino fakulteto biblioteka
+          T. Kosciuškos g. 10,Vilnius,tel.:<a class="contact"href="tel:852613841">(8-5) 261 3841</a></p>
+          <p><a class="contact" href="mailto:biblioteka@lmta.lt" target="_top">El. paštas: biblioteka@lmta.lt</a></p>
+          </div>
+          <div id="copy" class="col s12 m12 l3">
+           <p><?php function dabartiniaiMetai() {
+                $startYear = 2018;
+                $currentYear = date('Y');
+                if ($startYear < $currentYear) {
+                  echo '&copy;' . ' ' . $startYear . '-' . $currentYear;
+                }
+                else {
+                  echo '&copy;' . ' '. $currentYear;
+                }
+              }
+              echo dabartiniaiMetai();
+              ?></p>
+
+         </div>
+        </div>
+       </div>
+      </div>
+    </div>
+
+
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script type="text/javascript" src="js/1owl.carousel.min.js"></script>
+     <script type="text/javascript">
+
+          $(document).ready(function(){
+            $('.parallax').parallax();
+          });
+
+
+          const owl = $('.owl-carousel');
+          owl.owlCarousel({
+            items:4,
+            loop:true,
+            margin:0,
+            dots:false,
+            animateOut: 'slideOutLeft',
+            animateIn: 'slideInRight',
+            autoplay:true,
+            autoplaySpeed:2000,
+            autoplayHoverPause:true
+          });
+
+
+          // PAIESKA
+          function searchPrimo() {
+          document.getElementById("primoQuery").value="any,contains,"+document.getElementById("search").value;
+          document.forms["searchForm"].submit();
+        };
+
+
+                  $(document).ready(function(){
+                    $('.sidenav').sidenav();
+                  });
+
+                  $(document).ready(function(){
+                    $('.sidenav').sidenav();
+                  });
+
+
+                  $(document).ready(function() {
+                    var stickyNavTop = $('.nav-color').offset().top;
+                    var stickyNav = function(){
+                      var scrollTop = $(window).scrollTop();
+                    if (scrollTop > stickyNavTop) {
+                      $('.nav-color').addClass('sticky');
+                      }
+                    else {
+                      $('.nav-color').removeClass('sticky');
+                      }
+                    };
+                      stickyNav();
+
+                      $(window).scroll(function() {
+                        stickyNav();
+                      });
+                    });
+
+
+
+                      $(".hover").mouseleave(
+                      function() {
+                        $(this).removeClass("hover");
+                      }
+                    );
+
+
+     </script>
+   </body>
+ </html>

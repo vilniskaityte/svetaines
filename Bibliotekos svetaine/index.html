@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/css.css">
+      <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+      <link rel="stylesheet" href="https://brokensquare.com/Code/jquery-flipster/dist/jquery.flipster.min.css">
+      <style media="screen">
+
+
+        .search-box{
+            width: 800px;
+            margin-bottom: 80px;
+        }
+
+        .material-icons{
+            color: rgb(62,60,59) !important;
+            font-size: 30px !important;
+            padding-top: 5px !important;
+        }
+
+        #lupa{
+          padding-top: 15px!important;
+        }
+
+
+        .ieskoti {
+            background:none;
+            border: none;
+            margin-top: 18px;
+        }
+
+        #ieskok{
+          margin-top: -20px !important;
+        }
+
+        .ieskoti:hover{
+            background-color: transparent;
+        }
+
+        .virtuali {
+            text-align: center;
+            height: 38px;
+            padding-top: 0.1px !important;
+            color:white;
+            background-image: linear-gradient(60deg, #f4a320,  #f79332, #fa6e21);
+            margin-top: -100px;
+          }
+
+
+        #nauji{
+            float:right !important;
+            padding-right: 120px !important;
+            color:   #fa6e21;
+            text-decoration: underline;
+        }
+
+
+          #nauji:hover{
+            text-decoration: none;
+          }
+
+        .card {
+            background-color: #eee !important;
+            width: 80% !important;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-right: 120px;
+            margin-top: 50px !important;
+            box-shadow: 3px 3px 3px 3px   #ddd;
+        }
+
+          @media screen and (max-width: 990px) {
+        .card {
+            width: 100% !important;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      }
+
+          #nuorod{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            width: 150px;
+        }
+
+        .na{
+            width: 300px;
+            margin: 15px;
+        }
+
+        .my-flipster{
+            margin-left: 220px;
+            margin-right: 150px;
+        }
+
+        @media screen and (max-width: 990px) {
+          .nauji-leidiniai{
+            display: none;
+        }
+          }
+
+
+        .el-katalogai{
+            margin-left:-120px !important;
+            margin-top: 5px !important;
+        }
+
+      @media screen and (max-width: 990px) {
+        .el-katalogai{
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+      }
+
+        #home{
+            color: #fa6e21 !important;
+            margin-top: -3px;
+        }
+
+        .fixed {
+          position: fixed;
+          will-change: transform;
+        }
+
+        .fixed--bottom {
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+
+
+        :root {
+          --anchorColor: inherit;
+        }
+
+        a {
+          color: var(--anchorColor);
+        }
+
+
+
+      :root {
+        --buttonBorderWidth: 0.0625em;
+        --buttonPaddingHorizontal: 1em;
+        --buttonPaddingVertical: 0.5em;
+
+        --buttonHoverBackgroundColor: black;
+      }
+
+      .button {
+        background-color: transparent;
+        border: 0;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        margin: 0;
+        padding: 0;
+      }
+
+      .button {
+        border-style: solid;
+        border-width: var(--buttonBorderWidth);
+        padding: var(--buttonPaddingVertical) var(--buttonPaddingHorizontal);
+        position: relative;
+      }
+
+      .button::after {
+        background-color: var(--buttonHoverBackgroundColor);
+        bottom: 0;
+        content: '';
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: opacity 0.3s;
+        will-change: opacity;
+        z-index: -1;
+      }
+
+      .button:focus::after,
+      .button:hover::after {
+          opacity: 1;
+      }
+
+
+
+      :root {
+        --cookieDisclaumerBackgroundColor:  #fa6e21;
+        --cookieDisclaumerColor: white;
+        --cookieDisclaumerFontSize: 0.9rem;
+        --cookieDisclaumerPadding: 0.9rem;
+      }
+
+    .cookie-disclaimer {
+      background-color: var(--cookieDisclaumerBackgroundColor);
+      color: var(--cookieDisclaumerColor);
+      font-size: var(--cookieDisclaumerFontSize);
+      opacity: 0;
+      padding: var(--cookieDisclaumerPadding);
+      transform: translateY(100%);
+      transition: opacity 0.3s, transform 0.5s;
+    }
+
+    .cookie-disclaimer.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+      .cookie-disclaimer :first-child {
+        margin-top: 0;
+      }
+
+      .cookie-disclaimer :last-child {
+        margin-bottom: 0;
+      }
+
+
+      :root {
+        --mediaObjectMarginHorizontal: 1em;
+      }
+
+      .media {
+        display: flex;
+      }
+
+      .media--center {
+        align-items: center;
+      }
+
+      .media__object--left {
+        margin-right: var(--mediaObjectMarginHorizontal);
+      }
+
+      .media__object--right {
+        margin-left: var(--mediaObjectMarginHorizontal);
+        order: 1;
+      }
+
+      .media__body {
+        flex-grow: 1;
+      }
+
+      .link5{
+        color: rgb(62,60,59);
+      }
+      .link5:hover{
+        text-decoration: underline;
+      }
+
+        #karusele{
+          margin-top:-80px !important;
+          height:600px !important;
+          margin-left: 1%;
+          margin-bottom: 5% !important;
+        }
+
+      .carousel-item{
+        width: 15% !important;
+        height: 320px !important;
+      }
+
+
+      .card-image{
+        width: 120px;
+        margin-top: 100px;
+        margin-left: 10px;
+      }
+
+      .myq1{
+        margin-top: 10px;
+        width: 75% !important;
+        margin-left: 10px;
+
+      }
+
+      .data {
+        color:grey;
+        font-size: 12px;
+        text-align: center !important;
+        padding-bottom: 10px;
+
+      }
+
+        #kont{
+          margin-top:  -35px !important;
+          }
+          #headerwrap {
+            background: url(images/123.jpg) no-repeat center top;
+            margin-top:-15px;
+            text-align:center;
+            background-attachment: relative;
+            background-position: center center;
+            min-height: 200px;
+            width: 100%;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin-left: auto;
+
+          }
+
+          .logo{
+            margin-left: 10px;
+            margin-top: 50px;
+            margin-bottom: 5px;
+          }
+          .bibl{
+            margin-top: 50px;
+          }
+
+          .diagonal3{
+            background: -webkit-linear-gradient( 230deg , transparent 80%, rgba(244,163,32,0.6) 25% ) !important;
+            width: 100% !important;
+          }
+
+          .diagonal4{
+            background: -webkit-linear-gradient( -230deg , transparent 80%,  rgba(247,147,50,0.6) 25%) !important;
+            width: 100% !important;
+          }
+
+
+          @media screen and (max-width: 1300px) {
+          .logo{
+        margin-top: -40px;
+
+          }
+          }
+          @media screen and (max-width: 1300px) {
+            .bibl{
+            margin-top: -50px;
+
+            }}
+
+            @media screen and (max-width: 1300px) {
+              .virtuali{
+                margin-top:2px;
+              }}
+
+    </style>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <meta charset="UTF-8">
+    </head>
+    <body background="images/3.jpg">
+      <header>
+         <ul>
+
+            <div class="menu5">
+              <li class="menu-top1"><a class="lt" href="index.html">LT</a></li>
+              <li class="menu-top1"><a href="en.html">EN</a></li>
+              <li class="menu-top1"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUOEZWSEtBTDJDMlhVWE5KTVNKMEVFNkdPMy4u"target="_blank" ><i class="tiny material-icons" id="help">help_outline</i></a></li>
+
+              </div>
+           </ul>
+         </header>
+
+
+            <nav class="nav-color">
+                  <div class="container">
+                   <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="left hide-on-med-and-down">
+                       <li ><a href="index.html"><i class="material-icons" id="home">home</i></a></li>
+                       <li><a href="apie.html" >Apie</a></li>
+                       <li><a href="informacijos-istekliai.html">Informacijos ištekliai</a></li>
+                       <li><a href="mokslo.html">Mokslo ir meninio tyrimo darbai</a></li>
+                       <li><a href="paslaugos.html">Paslaugos</a></li>
+                       <li><a href="pagalba.html">Pagalba</a></li>
+                       <li><a class="duk"href="duk.html">D.U.K</a></li>
+                       <li><a href="kontaktai.html">Kontaktai</a></li>
+               </div>
+             </nav>
+
+
+             <ul class="sidenav" id="mobile-demo">
+               <li><a href="index.html">PAGRINDINIS</a></li>
+               <li><a href="naujienos.html">NAUJIENOS</a></li>
+               <li><a href="kontaktai.html"> DARBO LAIKAS IR KONTAKTAI</a></li>
+               <li><a href="informacijos-istekliai.html">INFORMACIJOS IŠTEKLIAI</a></li>
+               <li><a href="mokslo.html">MOKSLO TYRIMO DARBAI</a></li>
+               <li><a href="paslaugos.html">PASLAUGOS</a></li>
+               <li><a href="pagalba.html">PAGALBA</a></li>
+               <li><a href="duk.html">D.U.K</a></li>
+               <li><a href="apie.html">APIE BIBLIOTEKĄ</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+              <div id="headerwrap" id="home" name="home">
+                 <div class="diagonal3">
+                  <div class="diagonal4">
+
+                <ul>
+                   <li><a href="https://lmta.lt" target="_blank"><img class="logo"src="images/lmta.png" alt=""></a></li>
+                   <li class="bibl"><a href="index.html" class="bibl6"> <h6>Lietuvos muzikos ir <br> teatro akademijos <br><span class="bold"> BIBLIOTEKA</span></h6></a></li> </ul>
+  <div class="container">
+           <div class="search-box">
+            <div class="virtuali">
+              <h6>PAIEŠKA VIRTUALIOJE BIBLIOTEKOJE</h6>
+             </div>
+            <nav class="white">
+             <div class="nav-wrapper">
+              <div class="input-field">
+                <form accept-charset="utf-8" name="searchForm" method="get" action="https://lmta.lvb.lt/primo-explore/search?vid=LMTA&lang=lt_LT&sortby=rank"
+                enctype="application/x-www-form-urlencoded; charset=utf-8" target="_blank" onsubmit="searchPrimo()">
+                <input name="iehack" type="hidden" value="☠">
+                <input name="institution" type="hidden" value="LMTA">
+                <input name="vid" type="hidden" value="LMTA">
+                <input name="tab" type="hidden" value="default_tab">
+                <input name="search_scope" type="hidden" value="LMTA">
+                <input name="prefLang" type="hidden" value="lt_LT">
+                <input name="query" type="hidden" id="primoQuery">
+                <input id="search" type="search"  placeholder="Įveskite paieškos žodį ar frazę..." >
+                <i class="material-icons" id="ieskok">
+                <button type="submit" class="ieskoti">
+                <span class="material-icons" id="lupa">search</span></button></i>
+                </form>
+               </div>
+             </div>
+            </nav>
+           </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+
+   <div id="sidenav">
+    <br>
+    <div class="sectionImage" id="virsus"> <a href="db.html" id="se"> DUOMENŲ BAZĖS</a></div>
+    <div class="sectionImage"><a href="https://aleph.library.lt/F?func=find-b-0&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&amp=&local_base=lmt01&pds_handle=GUEST" target="_blank" id="se">EL. KATALOGAS</a></div>
+    <div class="sectionImage"><a href="kontaktai.html" id="se">KONTAKTAI</a></div>
+    <div class="sectionImage"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUNzlCS1UzSDhGMVpXOVlBV1pTS1dLRTFNVC4u" target="_blank" id="se">PASIŪLYK LEIDINĮ</a></div>
+    <p id="sectionTitle">GREITOS NUORODOS</p>
+  </div>
+       <div class="row">
+
+         <div class="col s12 m12 l2">
+            <div class="box-left">
+           </div>
+         </div>
+
+        <div class="col s12 m12 l8">
+          <div class="box-center-1">
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="images/download.jpg" alt="">
+
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                    <h6 class="pavadinimas">NAUJA PRENUMERUOJAMA DUOMENŲ BAZĖ MEDICI.TV</h6>
+                     <p class="data">2019-02-01</p>
+                      <p>Prenumeruojamų duomenų bazių sąrašą papildė gerų atsiliepimų sulaukusi klasikinės muzikos video įrašų kolekcija <a class="link" href="https://edu.medici.tv/en/"target="_blank">„Medici.tv”</a> !
+                      Kviečiame visus metus neribotai mėgautis koncertų, operų, baletų įrašais!
+                      Jungiantis iš LMTA kompiuterių tinklo prisijungimo slaptažodis nereikalingas.
+                      Norint duomenų bazėmis naudotis iš kitų kompiuterių (namuose ir kt.), reikia prisijungti per nuotolinę prieigą <a class="link" href="https://login.ezproxy.lmta.lt/menu" target="blank">EZPROXY</a></p>
+                  </div>
+                </div>
+              </div>
+
+
+           <div class="card horizontal">
+             <div class="card-image">
+               <img class="myq1"src="images/myq.png" alt="">
+
+             </div>
+             <div class="card-stacked">
+               <div class="card-content">
+                 <h6 class="pavadinimas">PATOBULINTAS PRISIJUNGIMAS PRIE DAUGIAFUNKCIO KOPIJAVIMO ĮRENGINIO</h6>
+                 <p class="data">2018-10-10</p>
+                 <p>Įdiegtas prisijungimas prie įrenginio trečiuoju būdu – naudojant PIN kodą. Prisijungę prie print.lmta.lt, sistema sugeneruos šešių skaitmenų PIN kodą. Tad jungdamiesi prie įrenginio užteks įvesti tik Jums paskirtą kodą. (Šis prisijungimo būdas rekomenduotinas tiems, kurie neturi studento pažymėjimo) <a class="link"href="https://lmta.lt/wp-content/uploads/2018/07/Nauja-galimyb%C4%97-prisijungti-prie-sitemos-naudojant-PIN-kod%C4%85.pdf" target="_blank">PIN kodo generavimo instrukcija.</a></p>
+               </div>
+             </div>
+           </div>
+
+
+            <a class="link" href="naujienos.html" id="nauji">RODYTI DAUGIAU</a>
+
+        </div>
+     </div>
+
+<br>
+
+<div class="col s12 m12 l1">
+  <div class="box-right">
+    <table class="el-katalogai">
+      <tr>
+        <td><a class="waves-effect default grey btn"href="https://aleph.library.lt/F?func=find-b-0&local_base=lmt01opac" target="_blank"id="ktalog">EL. KATALOGAS</a></td>
+      </tr>
+      <tr>
+        <td><a class="waves-effect default grey btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=I9-sCcebBUSj7Ts_9ti2lJDB29n-JwhMl94aU2c5qFVUNzlCS1UzSDhGMVpXOVlBV1pTS1dLRTFNVC4u" target="_blank" id="ktalog">PASIŪLYK LEIDINĮ</a></td>
+      </tr>
+      <tr class="darbolaikas">
+        <td>
+        <p class="bold">DARBO LAIKAS:</p>
+
+          <p>I–V 9.00-18.00
+          VI–VII nedirba</p>
+          <p>Paskutinis mėnesio penktadienis – švaros diena. Skaitytojai neaptarnaujami</p>
+          <p>Prieššventinę dieną biblioteka dirba viena valanda trumpiau</p></td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+
+
+        <div class="col s12 m12 l3">
+        </div>
+
+        <div class="col s12 m12 l12">
+          <div class="nauji-leidiniai">
+
+
+        <h5 class="pavadinimas" >NAUJI LEIDINIAI</h5>
+
+        <div class="carousel" id="karusele">
+          <a class="carousel-item" href="#one!"><img src="images/Paveikslėlis3.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="images/Paveikslėlis5.jpg"></a>
+          <a class="carousel-item" href="#three!"><img src="images/Paveikslėlis4.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="images/Paveikslėlis1.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="images/Paveikslėlis2.jpg"></a>
+        </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="col s12 m12 l3">
+      </div>
+
+    </div>
+    <div id="content"></div>
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+
+    <div class="footer">
+
+        <div class="row">
+          <div class="col s12 m12 l3">
+          <p class="biblioteka">LIETUVOS MUZIKOS IR TEATRO AKADEMIJA</p>
+            <hr>
+
+          </div>
+          <div class="col s12 m12 l6">
+          <p>Muzikos fakulteto skaitykla:
+          Gedimino pr. 42, Vilnius, tel.: <a class="contact" href="tel:852628447">(8-5) 262 8447</a></p>
+          <p>Muzikos fakulteto biblioteka:
+          Vilniaus g. 6-2,Vilnius, tel.:<a class="contact"href="tel:852622330">(8-5) 262 2330</a></p>
+          <p>Teatro ir kino fakulteto biblioteka
+          T. Kosciuškos g. 10,Vilnius,tel.:<a class="contact"href="tel:852613841">(8-5) 261 3841</a></p>
+          <p>Klaipėdos fakulteto biblioteka:
+          K. Donelaičio g. 4, Klaipėda,tel.: :<a class="contact"href="846398799">(8 46) 39 87 99</a></p>
+          <p><a class="contact" href="mailto:biblioteka@lmta.lt" target="_top">El. paštas: biblioteka@lmta.lt</a></p>
+
+          </div>
+          <div id="copy" class="col s12 m12 l3">
+          <br>
+          <br>
+
+            <td class="ic"><a href="https://facebook.com/lmtabiblioteka" target="_blank"><img src="images/001.png" id="btnfb"></a><a href="https://print.lmta.lt" target="_blank"><img src="images/002.png" id="btnfb"></a><a href="https://mail.lmta.lt" target="_blank"><img src="images/003.png" id="btnfb"></a></td>
+            <p class="atnaujinta">2019 © LMTA biblioteka</p>
+
+         </div>
+        </div>
+       </div>
+      </div>
+    </div>
+
+    <div class="fixed fixed--bottom cookie-disclaimer js-cookie-disclaimer">
+
+      <div class="media media--center">
+
+        <div class="media__object media__object--right">
+          <button class="button">SUTINKU</button>
+        </div>
+
+        <div class="media__body">
+          <p>Siekiant užtikrinti geresnę naršymo patirtį, svetainėje naudojami slapukai (angl. cookies). Tęsdami naršymą, jūs sutinkate su slapukų politika.  <a class="link5" href="slapukai.html">Slapukų politika</a></p>
+        </div>
+
+      </div>
+
+    </div>
+
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script type="text/javascript" src="https://brokensquare.com/Code/jquery-flipster/dist/jquery.flipster.min.js"></script>
+     <script type="text/javascript" src="js/1owl.carousel.min.js"></script>
+     <script type="text/javascript">
+
+          $(document).ready(function(){
+            $('.parallax').parallax();
+          });
+
+
+          // PAIESKA
+          function searchPrimo() {
+          document.getElementById("primoQuery").value="any,contains,"+document.getElementById("search").value;
+          document.forms["searchForm"].submit();
+        };
+
+
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+        });
+
+
+        $(document).ready(function() {
+          var stickyNavTop = $('.nav-color').offset().top;
+          var stickyNav = function(){
+            var scrollTop = $(window).scrollTop();
+          if (scrollTop > stickyNavTop) {
+            $('.nav-color').addClass('sticky');
+            }
+          else {
+            $('.nav-color').removeClass('sticky');
+            }
+          };
+            stickyNav();
+
+            $(window).scroll(function() {
+              stickyNav();
+            });
+          });
+
+
+
+            $(".hover").mouseleave(
+            function() {
+              $(this).removeClass("hover");
+            }
+          );
+
+          $('.my-flipster').flipster();
+
+
+          const $$cookieDisclaimer = document.querySelector('.js-cookie-disclaimer');
+
+      if (!localStorage.getItem('cookieDisclaimer')) {
+        $$cookieDisclaimer.classList.add('is-active');
+      }
+
+      $$cookieDisclaimer.querySelector('button').addEventListener('click', () => {
+        localStorage.setItem('cookieDisclaimer', true);
+        $$cookieDisclaimer.classList.remove('is-active');
+      });
+      $(document).ready(function(){
+          $('.carousel').carousel();
+        });
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100,
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+     </script>
+   </body>
+ </html>
